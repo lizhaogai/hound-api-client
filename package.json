@@ -7,7 +7,7 @@
   "author": "Yuan Tao <towyuan@outlook.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com//mm-api-client.git"
+    "url": "git://github.com//hound-api-client.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
