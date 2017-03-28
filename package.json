@@ -1,5 +1,5 @@
 {
-  "name": "mm-api-client",
+  "name": "hound-api-client",
   "version": "1.0.0",
   "description": "",
   "spec": "http://localhost:3000/explorer/swagger.json",
