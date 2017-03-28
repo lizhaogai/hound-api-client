@@ -1,7 +1,7 @@
 {
   "name": "mm-api-client",
   "version": "1.0.0",
-  "description": "Money Mommy API Explorer.",
+  "description": "",
   "spec": "http://localhost:3000/explorer/swagger.json",
   "main": "./index",
   "author": "Yuan Tao <towyuan@outlook.com>",

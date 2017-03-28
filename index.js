@@ -1,6 +1,6 @@
 /**
  * mm-api-client
- * Money Mommy API Explorer.
+ * 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: towyuan@outlook.com
@@ -12,9 +12,21 @@
  */
 
 const Requestor = require('./lib/_requestor');
-
+const Account = require('./lib/Account');
+const AchievementImport = require('./lib/AchievementImport');
+const AchievementImportRecord = require('./lib/AchievementImportRecord');
+const Help = require('./lib/Help');
+const Income = require('./lib/Income');
+const Settings = require('./lib/Settings');
+const SocialGroup = require('./lib/SocialGroup');
+const Top = require('./lib/Top');
+const Verification = require('./lib/Verification');
+const Wechat = require('./lib/Wechat');
+const Company = require('./lib/Company');
+const CommissionRecord = require('./lib/CommissionRecord');
+const SocialGroupStatus = require('./lib/SocialGroupStatus');
 /**
- * Money Mommy API Explorer.
+ * 
  *
  * @param {String|Object} [baseUrl]
  * @param {Object} [opts]
@@ -37,6 +49,20 @@ module.exports = function(baseUrl, opts) {
   client.configure = function(options) {
     requestor.configure(options);
   };
+
+  client.account = new Account(requestor);
+  client.achievementImport = new AchievementImport(requestor);
+  client.achievementImportRecord = new AchievementImportRecord(requestor);
+  client.help = new Help(requestor);
+  client.income = new Income(requestor);
+  client.settings = new Settings(requestor);
+  client.socialGroup = new SocialGroup(requestor);
+  client.top = new Top(requestor);
+  client.verification = new Verification(requestor);
+  client.wechat = new Wechat(requestor);
+  client.company = new Company(requestor);
+  client.commissionRecord = new CommissionRecord(requestor);
+  client.socialGroupStatus = new SocialGroupStatus(requestor);
 
   return client;
 };
