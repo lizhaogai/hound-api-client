@@ -25,6 +25,7 @@ const Wechat = require('./lib/Wechat');
 const Company = require('./lib/Company');
 const CommissionRecord = require('./lib/CommissionRecord');
 const SocialGroupStatus = require('./lib/SocialGroupStatus');
+const ErrorRecord = require('./lib/ErrorRecord');
 /**
  * 
  *
@@ -63,6 +64,7 @@ module.exports = function(baseUrl, opts) {
   client.company = new Company(requestor);
   client.commissionRecord = new CommissionRecord(requestor);
   client.socialGroupStatus = new SocialGroupStatus(requestor);
+  client.errorRecord = new ErrorRecord(requestor);
 
   return client;
 };
