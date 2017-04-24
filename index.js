@@ -26,6 +26,8 @@ const Company = require('./lib/Company');
 const CommissionRecord = require('./lib/CommissionRecord');
 const SocialGroupStatus = require('./lib/SocialGroupStatus');
 const ErrorRecord = require('./lib/ErrorRecord');
+const MediaEffect = require('./lib/MediaEffect');
+const MediaEffectImport = require('./lib/MediaEffectImport');
 /**
  * 
  *
@@ -65,6 +67,8 @@ module.exports = function(baseUrl, opts) {
   client.commissionRecord = new CommissionRecord(requestor);
   client.socialGroupStatus = new SocialGroupStatus(requestor);
   client.errorRecord = new ErrorRecord(requestor);
+  client.mediaEffect = new MediaEffect(requestor);
+  client.mediaEffectImport = new MediaEffectImport(requestor);
 
   return client;
 };
