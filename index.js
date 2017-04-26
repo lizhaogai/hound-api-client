@@ -28,6 +28,7 @@ const SocialGroupStatus = require('./lib/SocialGroupStatus');
 const ErrorRecord = require('./lib/ErrorRecord');
 const MediaEffect = require('./lib/MediaEffect');
 const MediaEffectImport = require('./lib/MediaEffectImport');
+const Subscriber = require('./lib/Subscriber');
 /**
  * 
  *
@@ -69,6 +70,7 @@ module.exports = function(baseUrl, opts) {
   client.errorRecord = new ErrorRecord(requestor);
   client.mediaEffect = new MediaEffect(requestor);
   client.mediaEffectImport = new MediaEffectImport(requestor);
+  client.subscriber = new Subscriber(requestor);
 
   return client;
 };
